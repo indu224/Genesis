@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+   background-image: url('images/pingpong.png');
+   background-color: black;
+  background-size: cover;        /* Makes the image cover the entire area */
+  background-position: center;   /* Centers the image */
+  background-repeat: no-repeat;  /* Prevents repeating */
+  height: 100vh;                 /* Full viewport height */
+  margin: 0;      
+  background-attachment: fixed; /* optional, keeps image fixed on scroll */
+}
+ .bodo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    display: flex;
+      overflow: visible;
+    justify-content: center;
+    align-items: center; /* Add some space between the squares */
+  }
+  
+
+.services {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Push it behind the .draggable elements */
+  pointer-events: none; /* So it doesn't block dragging */
+  text-align: center;
+}
+
+
+.services h1 {
+    font-size: 2rem;
+  font-family: "Rubik Pixels", system-ui;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(270deg, #d0e8ed, #def3df, #f1dcd4, #ebeed4);
+    background-size: 400% 100%;
+    background-position: 0% 50%;
+    background-clip: text;
+    z-index: 1;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(3.05);
+    transition: transform 3s ease;
+    animation: gradientAnimation 3s ease infinite;
+    opacity: 0.6;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+        
+.draggable {
+width: auto;
+  height: auto;
+              margin: 10px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: absolute; /* Required for dragging */
+            transition: transform 0.3s ease;
+            cursor: grab;
+            z-index: 10;
+          }
+
+
+.draggable:nth-child(1)  { top:  50px; left:  100px; }
+.draggable:nth-child(2)  { top: 120px; left:  300px; }
+.draggable:nth-child(3)  { top: 250px; left:  180px; }
+.draggable:nth-child(4)  { top: 400px; left:   90px; }
+.draggable:nth-child(5)  { top: 180px; left:  500px; }
+.draggable:nth-child(6)  { top: 320px; left:  250px; }
+.draggable:nth-child(7)  { top: 100px; left:  600px; }
+.draggable:nth-child(8)  { top: 670px; left:  940px; }
+.draggable:nth-child(9)  { top:  60px; left:  420px; }
+.draggable:nth-child(10) { top: 200px; left:  720px; }
+.draggable:nth-child(11) { top: 310px; left:  110px; }
+.draggable:nth-child(12) { top: 410px; left:  380px; }
+.draggable:nth-child(13) { top: 460px; left:  860px; }
+.draggable:nth-child(14) { top:  90px; left:  530px; }
+.draggable:nth-child(15) { top: 200px; left:  630px; }
+.draggable:nth-child(16) { top: 450px; left:  700px; }
+.draggable:nth-child(17) { top: 150px; left: 1000px; }
+.draggable:nth-child(18) { top: 370px; left: 1050px; }
+.draggable:nth-child(19) { top: 500px; left: 1080px; }
+.draggable:nth-child(20) { top: 220px; left: 1220px; }
+.draggable:nth-child(21) { top: 580px; left: 1300px; }
+.draggable:nth-child(22) { top: 120px; left: 1100px; }
+.draggable:nth-child(23) { top: 250px; left: 1250px; }
+.draggable:nth-child(24) { top: 430px; left: 1350px; }
+.draggable:nth-child(25) { top: 100px; left: 1180px; }
+.draggable:nth-child(26) { top: 310px; left: 1400px; }
+.draggable:nth-child(27) { top: 670px; left: 1050px; }
+.draggable:nth-child(28) { top: 590px; left: 1200px; }
+.draggable:nth-child(29) { top: 470px; left: 1380px; }
+.draggable:nth-child(30) { top: 370px; left: 1120px; }
+.draggable:nth-child(31) { top: 220px; left: 1320px; }
+.draggable:nth-child(32) { top: 620px; left: 1450px; }
+          
